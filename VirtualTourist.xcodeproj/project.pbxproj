@@ -104,9 +104,9 @@
 		9892C1C120C4D6940024429A /* VirtualTourist */ = {
 			isa = PBXGroup;
 			children = (
-				9892C1F520C4D78A0024429A /* Controller */,
-				9892C1F420C4D7820024429A /* View */,
 				9892C1F320C4D7680024429A /* Model */,
+				9892C1F420C4D7820024429A /* View */,
+				9892C1F520C4D78A0024429A /* Controller */,
 				9892C1CC20C4D6960024429A /* Assets.xcassets */,
 				9892C1CE20C4D6960024429A /* LaunchScreen.storyboard */,
 				9892C1D120C4D6960024429A /* Info.plist */,
