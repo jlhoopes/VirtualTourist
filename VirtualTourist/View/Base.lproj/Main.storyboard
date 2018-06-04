@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey2-cG-gva">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="9KF-gH-Ym4">
+            <objects>
+                <viewController id="OK5-a5-bIS" customClass="MapViewController" customModule="VirtualTourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Itp-g8-fpa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-O2-b7f">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oiY-LV-WHo" firstAttribute="bottom" secondItem="Ttd-O2-b7f" secondAttribute="bottom" id="Cp8-ws-kSH"/>
+                            <constraint firstItem="Ttd-O2-b7f" firstAttribute="leading" secondItem="oiY-LV-WHo" secondAttribute="leading" id="R3G-zX-gly"/>
+                            <constraint firstItem="oiY-LV-WHo" firstAttribute="trailing" secondItem="Ttd-O2-b7f" secondAttribute="trailing" id="pYR-o0-J4B"/>
+                            <constraint firstItem="Ttd-O2-b7f" firstAttribute="top" secondItem="oiY-LV-WHo" secondAttribute="top" id="yaw-Ka-Pm3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oiY-LV-WHo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rqj-DH-MQk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3n1-tg-YID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="-163.26836581709148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="osW-xI-VbP">
+            <objects>
+                <navigationController id="Ey2-cG-gva" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WrO-T0-FeC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OK5-a5-bIS" kind="relationship" relationship="rootViewController" id="5X2-QX-ctN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Um-X2-Yks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="-163"/>
+        </scene>
+    </scenes>
+</document>
