@@ -76,7 +76,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e8U-tB-Vx5" userLabel="Image Collection">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e8U-tB-Vx5" userLabel="Image Collection" customClass="CollectionViewCell" customModule="VirtualTourist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -86,6 +86,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-nU-Uds" userLabel="Cell Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-ry-y4o" userLabel="Activity Indicator">
+                                                    <rect key="frame" x="40" y="40" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -94,12 +98,13 @@
                                             <constraint firstAttribute="bottom" secondItem="uY9-nU-Uds" secondAttribute="bottom" id="Zhx-KG-CNz"/>
                                             <constraint firstItem="uY9-nU-Uds" firstAttribute="leading" secondItem="e8U-tB-Vx5" secondAttribute="leading" id="nGW-UR-iRd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="hdu-ry-y4o" id="5nv-5W-ar7"/>
+                                            <outlet property="cellImageView" destination="uY9-nU-Uds" id="OHT-yn-mag"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-ry-y4o">
-                                <rect key="frame" x="142" y="222" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -110,11 +115,9 @@
                             <constraint firstItem="gmg-YG-iuJ" firstAttribute="leading" secondItem="1Am-bY-k24" secondAttribute="leading" id="F7X-Es-mzs"/>
                             <constraint firstItem="Hbo-xR-L0Q" firstAttribute="leading" secondItem="1Am-bY-k24" secondAttribute="leading" id="K0d-Gm-ZHU"/>
                             <constraint firstItem="Hbo-xR-L0Q" firstAttribute="top" secondItem="1Am-bY-k24" secondAttribute="top" id="aoP-7e-fJ1"/>
-                            <constraint firstItem="hdu-ry-y4o" firstAttribute="centerY" secondItem="g0B-Vz-9M3" secondAttribute="centerY" id="gQL-KH-oaX"/>
                             <constraint firstItem="gmg-YG-iuJ" firstAttribute="top" secondItem="Hbo-xR-L0Q" secondAttribute="bottom" constant="2" id="hTp-BM-bC7"/>
                             <constraint firstItem="1Am-bY-k24" firstAttribute="bottom" secondItem="3v0-L0-MIo" secondAttribute="bottom" id="kx6-tt-mDn"/>
                             <constraint firstItem="1Am-bY-k24" firstAttribute="trailing" secondItem="Hbo-xR-L0Q" secondAttribute="trailing" id="uej-0X-ae4"/>
-                            <constraint firstItem="hdu-ry-y4o" firstAttribute="centerX" secondItem="g0B-Vz-9M3" secondAttribute="centerX" id="y27-dL-Tjl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Am-bY-k24"/>
                     </view>

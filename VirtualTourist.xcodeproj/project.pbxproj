@@ -17,6 +17,7 @@
 		9892C1F720C4DAF40024429A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1F620C4DAF40024429A /* MapViewController.swift */; };
 		9892C1F920C4DCA50024429A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1F820C4DCA50024429A /* DataController.swift */; };
 		9892C1FB20C4E0230024429A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1FA20C4E0230024429A /* Constants.swift */; };
+		D5F4648E20C755430057837A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F4648D20C755430057837A /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9892C1F620C4DAF40024429A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9892C1F820C4DCA50024429A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		9892C1FA20C4E0230024429A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5F4648D20C755430057837A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				9892C1C620C4D6940024429A /* Main.storyboard */,
+				D5F4648D20C755430057837A /* CollectionViewCell.swift */,
 			);
 			name = View;
 			path = VirtualTourist/View;
@@ -292,6 +295,7 @@
 			files = (
 				9892C1FB20C4E0230024429A /* Constants.swift in Sources */,
 				9892C1C320C4D6940024429A /* AppDelegate.swift in Sources */,
+				D5F4648E20C755430057837A /* CollectionViewCell.swift in Sources */,
 				9892C1F920C4DCA50024429A /* DataController.swift in Sources */,
 				9892C1F720C4DAF40024429A /* MapViewController.swift in Sources */,
 				9892C1CB20C4D6940024429A /* VirtualTourist.xcdatamodeld in Sources */,
