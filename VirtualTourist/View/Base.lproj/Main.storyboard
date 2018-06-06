@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,20 +55,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbo-xR-L0Q" userLabel="Location Zoom">
-                                <rect key="frame" x="0.0" y="64" width="320" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Mxe-9N-MBM"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="64" width="320" height="83"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-L0-MIo" userLabel="Action Button">
-                                <rect key="frame" x="0.0" y="430" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="450" width="320" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fKA-7N-PnM"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gzt-yD-lY9"/>
                                 </constraints>
                                 <state key="normal" title="New Collection"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-YG-iuJ" userLabel="Photo Table View">
-                                <rect key="frame" x="0.0" y="166" width="320" height="262"/>
+                                <rect key="frame" x="0.0" y="149" width="320" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="8to-4l-gmP">
                                     <size key="itemSize" width="100" height="100"/>
@@ -76,7 +74,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e8U-tB-Vx5" userLabel="Image Collection" customClass="CollectionViewCell" customModule="VirtualTourist" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="e8U-tB-Vx5" customClass="CollectionViewCell" customModule="VirtualTourist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -110,6 +108,7 @@
                         <constraints>
                             <constraint firstItem="1Am-bY-k24" firstAttribute="trailing" secondItem="gmg-YG-iuJ" secondAttribute="trailing" id="7O0-bO-IWc"/>
                             <constraint firstItem="3v0-L0-MIo" firstAttribute="top" secondItem="gmg-YG-iuJ" secondAttribute="bottom" constant="2" id="8lH-Iw-UrW"/>
+                            <constraint firstItem="Hbo-xR-L0Q" firstAttribute="height" secondItem="1Am-bY-k24" secondAttribute="height" multiplier="0.2" id="Ajq-wy-2y0"/>
                             <constraint firstItem="3v0-L0-MIo" firstAttribute="leading" secondItem="1Am-bY-k24" secondAttribute="leading" id="Cnc-ut-j5P"/>
                             <constraint firstItem="1Am-bY-k24" firstAttribute="trailing" secondItem="3v0-L0-MIo" secondAttribute="trailing" id="DeR-Dy-pi9"/>
                             <constraint firstItem="gmg-YG-iuJ" firstAttribute="leading" secondItem="1Am-bY-k24" secondAttribute="leading" id="F7X-Es-mzs"/>

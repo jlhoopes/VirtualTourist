@@ -24,13 +24,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         navigationBar.title = "Virtual Tourist"
     }
     
+    
     var dataController:
     DataController!
     
     //MARK: General Configurations
     func configureMap() {
+        
+        let locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
+        var currentLocation: CLLocation!
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            currentLocation = locManager.location
+        }
+        
         mapView.delegate = self
-        let location = CLLocationCoordinate2DMake(35, 139)
+        let location = CLLocationCoordinate2DMake(currentLocation.coordinate.longitude, currentLocation.coordinate.latitude)
         let mapSpan = MKCoordinateSpanMake(25, 25)
         let region = MKCoordinateRegionMake(location,mapSpan)
         self.mapView.setRegion(region, animated: true)

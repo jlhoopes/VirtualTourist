@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = window?.rootViewController as! UINavigationController
         let mapViewController = navigationController.topViewController as! MapViewController
         mapViewController.dataController = dataController
+        
         return true
     }
 
