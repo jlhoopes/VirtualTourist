@@ -32,11 +32,18 @@
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
+		<string>Privacy - Location Always and When In Use Usage Description</string>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>hello this is the thing</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>test</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
