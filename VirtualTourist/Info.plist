@@ -39,9 +39,9 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>hello this is the thing</string>
+	<string>Needed for locating the default location to find images near you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>test</string>
+	<string>Needed for locating the default images near you</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
