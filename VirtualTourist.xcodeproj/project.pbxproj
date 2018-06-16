@@ -17,6 +17,9 @@
 		9892C1F720C4DAF40024429A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1F620C4DAF40024429A /* MapViewController.swift */; };
 		9892C1F920C4DCA50024429A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1F820C4DCA50024429A /* DataController.swift */; };
 		9892C1FB20C4E0230024429A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1FA20C4E0230024429A /* Constants.swift */; };
+		D519FE8D20D3029C0076A76C /* pinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D519FE8C20D3029C0076A76C /* pinExtension.swift */; };
+		D519FE8F20D3036A0076A76C /* LocationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D519FE8E20D3036A0076A76C /* LocationCollectionViewController.swift */; };
+		D519FE9120D3056A0076A76C /* VirtualTouristClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D519FE9020D3056A0076A76C /* VirtualTouristClient.swift */; };
 		D5F4648E20C755430057837A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F4648D20C755430057837A /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		9892C1F620C4DAF40024429A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9892C1F820C4DCA50024429A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		9892C1FA20C4E0230024429A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D519FE8C20D3029C0076A76C /* pinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinExtension.swift; sourceTree = "<group>"; };
+		D519FE8E20D3036A0076A76C /* LocationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewController.swift; sourceTree = "<group>"; };
+		D519FE9020D3056A0076A76C /* VirtualTouristClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualTouristClient.swift; sourceTree = "<group>"; };
 		D5F4648D20C755430057837A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +143,9 @@
 		9892C1F320C4D7680024429A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9892C1FA20C4E0230024429A /* Constants.swift */,
 				9892C1C920C4D6940024429A /* VirtualTourist.xcdatamodeld */,
+				D519FE8C20D3029C0076A76C /* pinExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,7 +165,8 @@
 			children = (
 				9892C1F620C4DAF40024429A /* MapViewController.swift */,
 				9892C1F820C4DCA50024429A /* DataController.swift */,
-				9892C1FA20C4E0230024429A /* Constants.swift */,
+				D519FE8E20D3036A0076A76C /* LocationCollectionViewController.swift */,
+				D519FE9020D3056A0076A76C /* VirtualTouristClient.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,10 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D519FE8D20D3029C0076A76C /* pinExtension.swift in Sources */,
 				9892C1FB20C4E0230024429A /* Constants.swift in Sources */,
 				9892C1C320C4D6940024429A /* AppDelegate.swift in Sources */,
 				D5F4648E20C755430057837A /* CollectionViewCell.swift in Sources */,
 				9892C1F920C4DCA50024429A /* DataController.swift in Sources */,
+				D519FE8F20D3036A0076A76C /* LocationCollectionViewController.swift in Sources */,
+				D519FE9120D3056A0076A76C /* VirtualTouristClient.swift in Sources */,
 				9892C1F720C4DAF40024429A /* MapViewController.swift in Sources */,
 				9892C1CB20C4D6940024429A /* VirtualTourist.xcdatamodeld in Sources */,
 			);

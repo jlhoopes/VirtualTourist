@@ -2,7 +2,7 @@
 //  DataController.swift
 //  VirtualTourist
 //
-//  Created by user140243 on 6/3/18.
+//  Created by Jason on 6/3/18.
 //  Copyright © 2018 jlhoopes.com. All rights reserved.
 //
 
@@ -48,9 +48,8 @@ class DataController {
 extension DataController {
     
     func autoSaveViewContext(interval: TimeInterval = 10) {
-        print("Autosaving")
         guard interval > 0 else {
-            print("Cannot save on negative intervals")
+            //Do nothing
             return
         }
         if viewContext.hasChanges {

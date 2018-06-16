@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey2-cG-gva">
-    <device id="retina3_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey2-cG-gva">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,14 @@
             <objects>
                 <viewController id="OK5-a5-bIS" customClass="MapViewController" customModule="VirtualTourist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Itp-g8-fpa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-O2-b7f">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OK5-a5-bIS" id="dHK-Ni-gb5"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,13 +36,17 @@
                         <viewLayoutGuide key="safeArea" id="oiY-LV-WHo"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rqj-DH-MQk">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Pgv-fK-l9e" userLabel="Edit Button"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Pgv-fK-l9e" userLabel="Edit Button">
+                            <connections>
+                                <action selector="removePins:" destination="OK5-a5-bIS" id="AeG-Nk-Qd7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="editPinsButton" destination="Pgv-fK-l9e" id="WhQ-UX-cSt"/>
                         <outlet property="mapView" destination="Ttd-O2-b7f" id="Br9-Cv-IRb"/>
                         <outlet property="navigationBar" destination="Rqj-DH-MQk" id="6Ak-1v-83a"/>
-                        <segue destination="Q1F-QS-BqE" kind="show" id="Md7-U4-Kwp"/>
+                        <segue destination="Q1F-QS-BqE" kind="show" identifier="locationCollectionSegue" id="Md7-U4-Kwp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3n1-tg-YID" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,23 +56,26 @@
         <!--LocationCollection-->
         <scene sceneID="BrH-ra-9wY">
             <objects>
-                <viewController id="Q1F-QS-BqE" userLabel="LocationCollection" sceneMemberID="viewController">
+                <viewController id="Q1F-QS-BqE" userLabel="LocationCollection" customClass="LocationCollectionViewController" customModule="VirtualTourist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0B-Vz-9M3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbo-xR-L0Q" userLabel="Location Zoom">
-                                <rect key="frame" x="0.0" y="64" width="320" height="83"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="101"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-L0-MIo" userLabel="Action Button">
-                                <rect key="frame" x="0.0" y="450" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gzt-yD-lY9"/>
                                 </constraints>
                                 <state key="normal" title="New Collection"/>
+                                <connections>
+                                    <action selector="confirmImageSelectionAction:" destination="Q1F-QS-BqE" eventType="touchUpInside" id="gqv-Z8-2tS"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-YG-iuJ" userLabel="Photo Table View">
-                                <rect key="frame" x="0.0" y="149" width="320" height="299"/>
+                                <rect key="frame" x="0.0" y="167" width="320" height="369"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="8to-4l-gmP">
                                     <size key="itemSize" width="100" height="100"/>
@@ -83,8 +93,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-nU-Uds" userLabel="Cell Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </imageView>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-ry-y4o" userLabel="Activity Indicator">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-ry-y4o" userLabel="Activity Indicator">
                                                     <rect key="frame" x="40" y="40" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
@@ -97,11 +108,15 @@
                                             <constraint firstItem="uY9-nU-Uds" firstAttribute="leading" secondItem="e8U-tB-Vx5" secondAttribute="leading" id="nGW-UR-iRd"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="hdu-ry-y4o" id="5nv-5W-ar7"/>
-                                            <outlet property="cellImageView" destination="uY9-nU-Uds" id="OHT-yn-mag"/>
+                                            <outlet property="activityIndicator" destination="hdu-ry-y4o" id="Lvq-GW-Puc"/>
+                                            <outlet property="cellImageView" destination="uY9-nU-Uds" id="N3g-ds-TIB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q1F-QS-BqE" id="4pa-eO-qwO"/>
+                                    <outlet property="delegate" destination="Q1F-QS-BqE" id="k9s-U7-sxF"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,6 +135,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Am-bY-k24"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionViewActionButton" destination="3v0-L0-MIo" id="OQZ-ma-f8B"/>
+                        <outlet property="locationZoomIn" destination="Hbo-xR-L0Q" id="Qlg-Ey-HyM"/>
+                        <outlet property="photoTableView" destination="gmg-YG-iuJ" id="v5E-6P-rJ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4f-7a-nQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
